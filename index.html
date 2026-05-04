@@ -10,175 +10,251 @@
 
     <title>Mudassir Shah Portfolio</title>
 
+    <link rel="stylesheet" href="/styles/style.css">
+
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <header>
-        <nav>
-            <img src="" alt="Name Logo">
-            <h2>Mudassir Shah</h2>
-            <ul>
-                <li><a href="#home">Home</a></li>
+<!-- NAVBAR -->
+<header class="header">
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="logo-icon">MS</div>
+                <h1>Mudassir Shah</h1>
+            </div>
+
+            <!-- Menu -->
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#services">Services ▼</a></li>
             </ul>
-            <img src="" alt="Dark mode">
-        </nav>
-    </header>
+
+            <!-- Right Side -->
+            <div class="nav-right">
+                <div class="dark-toggle" id="darkToggle">☾</div>
+            </div>
+        </div>
+    </nav>
+</header>
 
     <!-- MAIN CONTENT -->
-    <main>
-
-        <!-- HERO SECTION -->
-       <section id="home">
-
-    <div class="main-container">
-
-        <!-- LEFT SIDE -->
-        <div class="main-left">
-            <h2>Hi, I'm <span>Mudassir Shah</span></h2>
-
-            <h3>Front-end Developer</h3>
-
-            <p>
-                Turning ideas into real-world applications. Passionate about web development, and database systems.
+   <!-- HERO SECTION -->
+<section id="home" class="hero">
+    <div class="hero-container">
+        <!-- Left Content -->
+        <div class="hero-left">
+            <h1>Hi, I'm <span class="highlight">Mudassir Shah</span></h1>
+            <h2>Front-end / MERN Stack Developer</h2>
+            
+            <p class="hero-desc">
+                Turning ideas into real-world applications. Passionate about web development, 
+                modern interfaces, and database systems.
             </p>
 
-            <!-- Buttons -->
-            <div class="main-buttons">
-                <a href="#">Hire Me</a>
-                <a href="cv.pdf" download>Download CV</a>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">
+                    <span>Hire Me</span>
+                </a>
+                <a href="cv.pdf" download class="btn-secondary">
+                    Download CV
+                </a>
             </div>
 
-            <!-- Experience -->
-            <div class="main-exp">
-                <div>
-                    <h4>1+</h4>
+            <!-- Stats -->
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>1+</h3>
                     <p>Years Experience</p>
                 </div>
-                <div>
-                    <h4>3+</h4>
-                    <p>Projects</p>
+                <div class="stat">
+                    <h3>3+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat">
+                    <h3>5+</h3>
+                    <p>Technologies</p>
                 </div>
             </div>
         </div>
 
-        <!-- RIGHT SIDE -->
-        <div class="main-right">
+        <!-- Right Visual -->
+        <div class="hero-right">
+            <div class="profile-wrapper">
+                <div class="profile-circle">
+                    <img src="profile.png" alt="Mudassir Shah">
+                </div>
+                
+                <!-- Floating Skills -->
+                <div class="floating-skills">
+                    <div class="skill skill-1">React</div>
+                    <div class="skill skill-2">JavaScript</div>
+                    <div class="skill skill-3">MySQL</div>
+                    <div class="skill skill-4">Node.js</div>
+                    <div class="skill skill-5">Tailwind</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+       <!-- ABOUT SECTION -->
+<section id="about" class="about-section">
+    <div class="section-container">
+        <h2 class="section-title">About Me - Your Web Development Partner</h2>
+        
+        <div class="about-content">
+            <p>
+                Hi, I’m Mudassir Shah, a passionate MERN Stack Developer with a strong focus on building 
+                modern, scalable, and user-friendly web applications.
+            </p>
+            
+            <p>
+                I specialize in creating dynamic and responsive user interfaces using React and modern 
+                frontend technologies. With a solid foundation in database management (MySQL, MongoDB, Oracle), 
+                I focus on writing clean, maintainable code and developing systems that perform efficiently 
+                under real-world conditions.
+            </p>
+            
+            <p>
+                Whether it's crafting beautiful frontend experiences or building robust backend solutions, 
+                I’m committed to delivering high-quality digital products that bring your ideas to life.
+            </p>
+        </div>
+    </div>
+</section>
 
-            <!-- Profile Image -->
-            <div class="profile-circle">
-                <img src="profile.png" alt="Mudassir Shah">
+        <!-- SKILLS -->
+       <!-- SKILLS SECTION -->
+<section id="skills" class="skills-section">
+    <div class="section-container">
+        <h2 class="section-title">Technical Expertise</h2>
+        <p class="section-subtitle">
+            Comprehensive web development skills with modern tools and technologies.
+        </p>
+
+        <div class="skills-grid">
+            
+            <!-- Card 1 -->
+            <div class="skill-card">
+                <h3>Core Technologies</h3>
+                <ul>
+                    <li>React.js</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>HTML5 & CSS3</li>
+                    <li>Tailwind CSS</li>
+                    <li>MySQL</li>
+                </ul>
             </div>
 
-            <!-- Floating Skills -->
-            <div class="floating-skills">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>MySQL</span>
-                <span>Python</span>
+            <!-- Card 2 -->
+            <div class="skill-card">
+                <h3>MERN Stack</h3>
+                <ul>
+                    <li>MongoDB</li>
+                    <li>Express.js</li>
+                    <li>React.js</li>
+                    <li>Node.js</li>
+                    <li>RESTful APIs</li>
+                </ul>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="skill-card">
+                <h3>Backend & Database</h3>
+                <ul>
+                    <li>PHP & MySQL</li>
+                    <li>Database Design</li>
+                    <li>CRUD Operations</li>
+                    <li>Authentication</li>
+                    <li>Oracle Database</li>
+                </ul>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="skill-card">
+                <h3>Development Tools</h3>
+                <ul>
+                    <li>Git & GitHub</li>
+                    <li>VS Code</li>
+                    <li>Postman</li>
+                    <li>Browser DevTools</li>
+                    <li>Debugging & Testing</li>
+                </ul>
             </div>
 
         </div>
-
     </div>
+</section>
+        <!-- PROJECTS -->
+       <!-- PROJECTS SECTION -->
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects-section">
+    <div class="section-container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+            Showcasing some of my recent work in web development and full-stack applications.
+        </p>
 
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project1.jpg" alt="Hotel Management">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">PHP / MySQL</span>
+                    <h3>Smart Hotel Management System</h3>
+                    <p>Complete hotel booking system with admin dashboard and customer management.</p>
+                    <div class="project-tech">
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project2.jpg" alt="Portfolio">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">React</span>
+                    <h3>Modern Portfolio Website</h3>
+                    <p>Responsive personal portfolio built with React and modern design.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Tailwind</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project3.jpg" alt="CRUD App">
+                   </div>
+                <div class="project-info">
+                    <span class="project-tag">MERN</span>
+                    <h3>Full Stack CRUD Application</h3>
+                    <p>Complete CRUD app with authentication and database integration.</p>
+                    <div class="project-tech">
+                        <span>MongoDB</span>
+                        <span>React</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </section>
 
-        <!-- ABOUT -->
-        <section id="about">
-                <h2>About Me</h2>
-                <p>Hi, I’m Mudassir Shah, a MERN stack developer passionate about building modern, scalable, and efficient web applications.
-
-I work with React to create dynamic and responsive user interfaces, and I have a strong foundation in database management using MySQL, Oracle, and MongoDB. I focus on writing clean, maintainable code and designing systems that perform well under real-world conditions.
-
-Whether it’s developing frontend interfaces or structuring backend data, I aim to deliver solutions that are practical, reliable, and optimized for performance.</p>
-            </section>
-
-        <!-- SKILLS -->
-        <section id="skills">
-                <h2>Technical Skills</h2>
-        
-        <!-- Core Technologies -->
-        <div class="expertise-category">
-    <h3>Core Technologies</h3>
-    <ul>
-        <li>MERN Stack (MongoDB, Express.js, React, Node.js)</li>
-        <li>Frontend Development (HTML, CSS, JavaScript, React)</li>
-        <li>Database Management (MySQL, Oracle, MongoDB)</li>
-    </ul>
-</div>
-
-<!-- Backend & Data Handling -->
-<div class="expertise-category">
-    <h3>Backend & Data Handling</h3>
-    <ul>
-        <li>RESTful API Development</li>
-        <li>CRUD Operations & Data Modeling</li>
-        <li>Authentication & Basic Security</li>
-    </ul>
-</div>
-
-<!-- Development Tools -->
-<div class="expertise-category">
-    <h3>Development Tools</h3>
-    <ul>
-        <li>Git & GitHub</li>
-        <li>VS Code</li>
-        <li>Browser DevTools</li>
-        <li>Basic Debugging & Testing</li>
-    </ul>
-</div>
-    
-            </section>
-
-        <!-- PROJECTS -->
-        <section id="projects">
-                <h2>Projects</h2>
-                 <div class="project-card">
-        <h3>Smart Hotel Management System</h3>
-        <p>
-            A web-based hotel management system that allows users to book rooms and enables admins to manage customers, staff, and room availability through a centralized dashboard.
-        </p>
-        <ul>
-            <li>Developed using PHP and MySQL</li>
-            <li>Admin dashboard for managing bookings and records</li>
-            <li>Structured database design with efficient queries</li>
-        </ul>
-    </div>
-
-    <div class="project-card">
-        <h3>React Portfolio Website</h3>
-        <p>
-            A responsive personal portfolio website built to showcase projects, skills, and contact information with a clean and modern UI.
-        </p>
-        <ul>
-            <li>Built with React, HTML, CSS, and JavaScript</li>
-            <li>Component-based architecture</li>
-            <li>Responsive design for multiple devices</li>
-        </ul>
-    </div>
-
-    <div class="project-card">
-        <h3>CRUD Web Application</h3>
-        <p>
-            A basic full-stack application that performs Create, Read, Update, and Delete operations with proper data handling.
-        </p>
-        <ul>
-            <li>Implemented RESTful APIs</li>
-            <li>Database integration (MySQL / MongoDB)</li>
-            <li>Form handling and validation</li>
-        </ul>
-    </div>
-
-            </section>
-
         <!-- CONTACT -->
+         <section id="contacts">
          <h2>Contact</h2>
                  <p>If you’d like to collaborate or have any opportunities, feel free to reach out.</p>
 
