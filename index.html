@@ -10,6 +10,8 @@
 
     <title>Mudassir Shah Portfolio</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/style.css">
 
 </head>
@@ -88,7 +90,7 @@
         <div class="hero-right">
             <div class="profile-wrapper">
                 <div class="profile-circle">
-                    <img src="profile.png" alt="Mudassir Shah">
+                    <img src="/img/pic.jpg" alt="Mudassir Shah">
                 </div>
                 
                 <!-- Floating Skills -->
@@ -130,7 +132,6 @@
     </div>
 </section>
 
-        <!-- SKILLS -->
        <!-- SKILLS SECTION -->
 <section id="skills" class="skills-section">
     <div class="section-container">
@@ -192,8 +193,7 @@
         </div>
     </div>
 </section>
-        <!-- PROJECTS -->
-       <!-- PROJECTS SECTION -->
+
 <!-- PROJECTS SECTION -->
 <section id="projects" class="projects-section">
     <div class="section-container">
@@ -206,12 +206,11 @@
             
             <div class="project-card">
                 <div class="project-image">
-                    <img src="project1.jpg" alt="Hotel Management">
+                    <img src="/img/project-1.jpg" alt="Hotel Management">
                 </div>
                 <div class="project-info">
-                    <span class="project-tag">PHP / MySQL</span>
-                    <h3>Smart Hotel Management System</h3>
-                    <p>Complete hotel booking system with admin dashboard and customer management.</p>
+                    <h3>The Smart Hotel</h3>
+                    <p>Complete hotel booking system featuring an intuitive user interface for room reservations and a powerful admin dashboard. The system includes customer management, room availability tracking, booking history, and real-time status updates.</p>
                     <div class="project-tech">
                         <span>PHP</span>
                         <span>MySQL</span>
@@ -221,12 +220,11 @@
 
             <div class="project-card">
                 <div class="project-image">
-                    <img src="project2.jpg" alt="Portfolio">
+                    <img src="/img/project-2.jpg" alt="Portfolio">
                 </div>
                 <div class="project-info">
-                    <span class="project-tag">React</span>
                     <h3>Modern Portfolio Website</h3>
-                    <p>Responsive personal portfolio built with React and modern design.</p>
+                    <p>Responsive personal portfolio built using React with a clean, modern UI. Showcases projects, skills, and contact features with optimized performance along with a variety of colors and skills and technical skills.</p>
                     <div class="project-tech">
                         <span>React</span>
                         <span>Tailwind</span>
@@ -236,12 +234,12 @@
 
             <div class="project-card">
                 <div class="project-image">
-                    <img src="project3.jpg" alt="CRUD App">
+                    <img src="/img/project-3.jpg" alt="CRUD App">
                    </div>
                 <div class="project-info">
-                    <span class="project-tag">MERN</span>
-                    <h3>Full Stack CRUD Application</h3>
-                    <p>Complete CRUD app with authentication and database integration.</p>
+                    <h3>CRUD Application</h3>
+                    <p>
+Full-stack CRUD application built using Express.js and Node.js. Implements RESTful APIs for creating, reading, updating, and deleting data. Includes efficient database integration and structured backend architecture.</p>
                     <div class="project-tech">
                         <span>MongoDB</span>
                         <span>React</span>
@@ -253,23 +251,95 @@
     </div>
 </section>
 
-        <!-- CONTACT -->
-         <section id="contacts">
-         <h2>Contact</h2>
-                 <p>If you’d like to collaborate or have any opportunities, feel free to reach out.</p>
+<section class="contact-section">
+    <div class="container">
 
-    <div class="contact-info">
-        <p><strong>Name:</strong> Mudassir Shah</p>
-        <p><strong>Email:</strong> masktk777@gmail.com</p>
-        <p><strong>Phone:</strong> 0303-9323389</p>
-        <p><strong>Location:</strong> Pakistan</p>
-    </div>
+        <!-- LEFT SIDE -->
+        <div class="form-box">
+            <h2>Start Your Project</h2>
+            <p>Tell me about your project and let's discuss how I can help you achieve your goals. I'll get back to you within 24 hours with a detailed response.</p>
 
-    <div class="contact-links">
-        <a href="https://github.com/mdsr-shah" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/mdsr.shah" target="_blank">LinkedIn</a>
+            <form>
+                <div class="row">
+                    <div class="input-group">
+                        <label>Your Name *</label>
+                        <input type="text" placeholder="Enter your full name">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email Address *</label>
+                        <input type="email" placeholder="your@email.com">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Project Type</label>
+                    <select>
+                        <option>Select your project type</option>
+                        <option>Full Stack Website</option>
+                        <option>Php/MySQL</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Project Details *</label>
+                    <textarea placeholder="Tell me about your project goals, timeline, and any specific requirements..."></textarea>
+                </div>
+
+                <button type="submit">Send Message & Get Free Quote</button>
+            </form>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+
+           <div class="info-card">
+    <div class="icon-box">
+        <i class="fas fa-location-dot"></i>
     </div>
-    </section>
+    <div class="info-text">
+        <h4>Location</h4>
+        <p>Available Globally</p>
+        <small>Available for remote work worldwide</small>
+    </div>
+</div>
+
+<div class="info-card">
+    <div class="icon-box">
+        <i class="fas fa-envelope"></i>
+    </div>
+    <div class="info-text">
+        <h4>Email</h4>
+        <p class="link">masktk777@gmail.com</p>
+        <small>Response within 24 hours</small>
+    </div>
+</div>
+
+<div class="info-card">
+    <div class="icon-box">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+    <div class="info-text">
+        <h4>WhatsApp</h4>
+        <p class="link">+92 303 932 3389</p>
+        <small>Quick messaging and calls</small>
+    </div>
+</div>
+
+<div class="info-card">
+    <div class="icon-box">
+        <i class="fas fa-clock"></i>
+    </div>
+    <div class="info-text">
+        <h4>Availability</h4>
+        <p>24/7 Support Available</p>
+        <small>Flexible hours for international clients</small>
+    </div>
+</div>
+    </div>
+</section>
 
     </main>
 
