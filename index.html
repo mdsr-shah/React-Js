@@ -1,57 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mudassir Shah -  Web Developer Portfolio">
-    <meta name="keywords" content="Mudassir Shah, Web Developer, Portfolio">
+    
+    <!-- SEO & Description -->
+    <meta name="description" content="Mudassir Shah - Passionate MERN Stack Developer specializing in modern, scalable, and user-friendly web applications.">
+    <meta name="keywords" content="Mudassir Shah, MERN Stack Developer, React Developer, Full Stack Developer, Web Developer, Portfolio">
     <meta name="author" content="Mudassir Shah">
 
-    <title>Mudassir Shah Portfolio</title>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Mudassir Shah | MERN Stack Developer">
+    <meta property="og:description" content="Passionate MERN Stack Developer building modern, scalable web applications.">
+    <meta property="og:image" content="https://yourdomain.com/img/pic.png">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>Mudassir Shah | MERN Stack Developer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/style.css">
-
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<header class="header">
-    <nav class="navbar">
+<!-- NAVBAR / HEADER -->
+<header class="header" role="banner">
+    <nav class="navbar" aria-label="Main Navigation">
         <div class="nav-container">
-            <!-- Logo -->
-            <div class="logo">
-                <div class="logo-icon">MS</div>
-                <h1>Mudassir Shah</h1>
-            </div>
 
-            <!-- Menu -->
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contacts">Contact</a></li>
-                <li><a href="#services">Services ▼</a></li>
+            <!-- Logo -->
+            <a href="#home" class="logo" aria-label="Mudassir Shah - Homepage">
+                <div class="logo-icon" aria-hidden="true">MS</div>
+                <h1>Mudassir Shah</h1>
+            </a>
+
+            <!-- Main Navigation -->
+            <ul class="nav-links" role="list" id="nav-menu">
+                <li role="listitem"><a href="#home" class="active" aria-current="page">Home</a></li>
+                <li role="listitem"><a href="#about">About</a></li>
+                <li role="listitem"><a href="#skills">Skills</a></li>
+                <li role="listitem"><a href="#projects">Projects</a></li>
+                <li role="listitem"><a href="#contacts">Contact</a></li>
+                <li role="listitem"><a href="#services">Services</a></li>
             </ul>
 
             <!-- Right Side -->
             <div class="nav-right">
-                <div class="dark-toggle" id="darkToggle">☾</div>
-                 <div class="menu-btn" id="menuBtn">☰</div>
+                <button class="dark-toggle" id="darkToggle" aria-label="Toggle Dark Mode">
+                    ☾
+                </button>
+                <button class="menu-btn" id="menuBtn" 
+                        aria-label="Open navigation menu" 
+                        aria-expanded="false">
+                    ☰
+                </button>
             </div>
         </div>
     </nav>
 </header>
 
-<!-- MAIN CONTENT -->
-   <!-- HERO SECTION -->
+<!-- HERO SECTION -->
 <section id="home" class="hero">
     <div class="hero-container">
-        <!-- Left Content -->
         <div class="hero-left">
             <h1>Hi, I'm <span class="highlight">Mudassir Shah</span></h1>
             <h2>Front-end / MERN Stack Developer</h2>
@@ -62,15 +79,10 @@
             </p>
 
             <div class="hero-buttons">
-                <a href="#contacts" class="btn-primary">
-                    <span>Hire Me</span>
-                </a>
-                <a href="/files/myCV.pdf" download class="btn-secondary">
-                    Download CV
-                </a>
+                <a href="#contacts" class="btn-primary" aria-label="Go to Contact Section to hire me">Hire Me</a>
+                <a href="/files/myCV.pdf" download class="btn-secondary" aria-label="Download Mudassir Shah Resume">Download CV</a>
             </div>
 
-            <!-- Stats -->
             <div class="hero-stats">
                 <div class="stat">
                     <h3>1+</h3>
@@ -87,28 +99,22 @@
             </div>
         </div>
 
-        <!-- Right Visual -->
-       <div class="hero-right">
-    <div class="profile-wrapper">
-        
-        <!-- Large Background Glow Circle -->
-        <div class="large-glow-circle"></div>
-        
-        <!-- Main Profile Circle -->
-        <div class="profile-circle">
-            <img src="/img/pic.png" alt="Mudassir Shah">
-        </div>
-
-        <!-- Floating Skills -->
-        <div class="floating-skills">
-            <div class="skill skill-1">React</div>
-            <div class="skill skill-2">JavaScript</div>
-            <div class="skill skill-3">MySQL</div>
-            <div class="skill skill-4">Node.js</div>
-            <div class="skill skill-5">Tailwind</div>
+        <div class="hero-right">
+            <div class="profile-wrapper">
+                <div class="large-glow-circle"></div>
+                <div class="profile-circle">
+                    <img src="/img/pic.png" alt="Mudassir Shah - Professional Portrait">
+                </div>
+                <div class="floating-skills">
+                    <div class="skill skill-1">React</div>
+                    <div class="skill skill-2">JavaScript</div>
+                    <div class="skill skill-3">MySQL</div>
+                    <div class="skill skill-4">Node.js</div>
+                    <div class="skill skill-5">Tailwind</div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 </section>
     
        <!-- ABOUT SECTION -->
@@ -137,20 +143,20 @@
     </div>
 </section>
 
-       <!-- SKILLS SECTION -->
-<section id="skills" class="skills-section">
+  <!-- SKILLS SECTION -->
+<section id="skills" class="skills-section" aria-labelledby="skills-title">
     <div class="section-container">
-        <h2 class="section-title">Technical Expertise</h2>
-        <p class="section-subtitle">
+        <h2 id="skills-title" class="section-title">Technical Expertise</h2>
+        <p class="section-subtitle" id="skills-desc">
             Comprehensive web development skills with modern tools and technologies.
         </p>
 
-        <div class="skills-grid">
+        <div class="skills-grid" role="list" aria-label="Technical Skills Categories">
             
             <!-- Card 1 -->
-            <div class="skill-card">
-                <h3>Core Technologies</h3>
-                <ul>
+            <div class="skill-card" role="listitem">
+                <h3 id="core-tech">Core Technologies</h3>
+                <ul aria-labelledby="core-tech">
                     <li>React.js</li>
                     <li>JavaScript (ES6+)</li>
                     <li>HTML5 & CSS3</li>
@@ -160,9 +166,9 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="skill-card">
-                <h3>MERN Stack</h3>
-                <ul>
+            <div class="skill-card" role="listitem">
+                <h3 id="mern-stack">MERN Stack</h3>
+                <ul aria-labelledby="mern-stack">
                     <li>MongoDB</li>
                     <li>Express.js</li>
                     <li>React.js</li>
@@ -172,9 +178,9 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="skill-card">
-                <h3>Backend & Database</h3>
-                <ul>
+            <div class="skill-card" role="listitem">
+                <h3 id="backend-db">Backend & Database</h3>
+                <ul aria-labelledby="backend-db">
                     <li>PHP & MySQL</li>
                     <li>Database Design</li>
                     <li>CRUD Operations</li>
@@ -184,9 +190,9 @@
             </div>
 
             <!-- Card 4 -->
-            <div class="skill-card">
-                <h3>Development Tools</h3>
-                <ul>
+            <div class="skill-card" role="listitem">
+                <h3 id="dev-tools">Development Tools</h3>
+                <ul aria-labelledby="dev-tools">
                     <li>Git & GitHub</li>
                     <li>VS Code</li>
                     <li>Postman</li>
@@ -199,53 +205,56 @@
     </div>
 </section>
 
+
 <!-- PROJECTS SECTION -->
-<section id="projects" class="projects-section">
+<section id="projects" class="projects-section" aria-labelledby="projects-title">
     <div class="section-container">
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">
+        <h2 id="projects-title" class="section-title">Featured Projects</h2>
+        <p class="section-subtitle" id="projects-desc">
             Showcasing some of my recent work in web development and full-stack applications.
         </p>
 
-        <div class="projects-grid">
+        <div class="projects-grid" role="list" aria-label="Featured Projects">
             
-            <div class="project-card">
+            <!-- Project 1 -->
+            <div class="project-card" role="listitem">
                 <div class="project-image">
-                    <img src="/img/project-1.jpg" alt="Hotel Management">
+                    <img src="/img/project-1.jpg" alt="Smart Hotel Management System">
                 </div>
                 <div class="project-info">
-                    <h3>The Smart Hotel</h3>
+                    <h3 id="project-1">The Smart Hotel</h3>
                     <p>Complete hotel booking system featuring an intuitive user interface for room reservations and a powerful admin dashboard. The system includes customer management, room availability tracking, booking history, and real-time status updates.</p>
-                    <div class="project-tech">
+                    <div class="project-tech" aria-labelledby="project-1">
                         <span>PHP</span>
                         <span>MySQL</span>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card">
+            <!-- Project 2 -->
+            <div class="project-card" role="listitem">
                 <div class="project-image">
-                    <img src="/img/project-2.jpg" alt="Portfolio">
+                    <img src="/img/project-2.jpg" alt="Modern Portfolio Website">
                 </div>
                 <div class="project-info">
-                    <h3>Modern Portfolio Website</h3>
+                    <h3 id="project-2">Modern Portfolio Website</h3>
                     <p>Responsive personal portfolio built using React with a clean, modern UI. Showcases projects, skills, and contact features with optimized performance along with a variety of colors and skills and technical skills.</p>
-                    <div class="project-tech">
+                    <div class="project-tech" aria-labelledby="project-2">
                         <span>React</span>
                         <span>Tailwind</span>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card">
+            <!-- Project 3 -->
+            <div class="project-card" role="listitem">
                 <div class="project-image">
-                    <img src="/img/project-3.jpg" alt="CRUD App">
-                   </div>
+                    <img src="/img/project-3.jpg" alt="CRUD Application">
+                </div>
                 <div class="project-info">
-                    <h3>CRUD Application</h3>
-                    <p>
-Full-stack CRUD application built using Express.js and Node.js. Implements RESTful APIs for creating, reading, updating, and deleting data. Includes efficient database integration and structured backend architecture.</p>
-                    <div class="project-tech">
+                    <h3 id="project-3">CRUD Application</h3>
+                    <p>Full-stack CRUD application built using Express.js and Node.js. Implements RESTful APIs for creating, reading, updating, and deleting data. Includes efficient database integration and structured backend architecture.</p>
+                    <div class="project-tech" aria-labelledby="project-3">
                         <span>MongoDB</span>
                         <span>React</span>
                     </div>
@@ -255,31 +264,31 @@ Full-stack CRUD application built using Express.js and Node.js. Implements RESTf
         </div>
     </div>
 </section>
-
-<section id="contacts" class="contact-section">
+<!-- Contact Section -->
+<section id="contacts" class="contact-section" aria-labelledby="contact-title">
     <div class="container">
 
-        <!-- LEFT SIDE -->
-        <div class="form-box">
-            <h2>Start Your Project</h2>
+        <!-- LEFT SIDE - Form -->
+        <div class="form-box" role="region" aria-labelledby="form-title">
+            <h2 id="form-title">Start Your Project</h2>
             <p>Tell me about your project and let's discuss how I can help you achieve your goals. I'll get back to you within 24 hours with a detailed response.</p>
 
-            <form>
+            <form aria-label="Project inquiry form">
                 <div class="row">
                     <div class="input-group">
-                        <label>Your Name *</label>
-                        <input type="text" placeholder="Enter your full name">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" maxlength="30" placeholder="Enter your full name" required>
                     </div>
 
                     <div class="input-group">
-                        <label>Email Address *</label>
-                        <input type="email" placeholder="your@email.com">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" placeholder="your@email.com" maxlength="30" required>
                     </div>
                 </div>
 
                 <div class="input-group">
-                    <label>Project Type</label>
-                    <select>
+                    <label for="project-type">Project Type</label>
+                    <select id="project-type">
                         <option>Select your project type</option>
                         <option>Full Stack Website</option>
                         <option>Php/MySQL</option>
@@ -288,76 +297,75 @@ Full-stack CRUD application built using Express.js and Node.js. Implements RESTf
                 </div>
 
                 <div class="input-group">
-                    <label>Project Details *</label>
-                    <textarea placeholder="Tell me about your project goals, timeline, and any specific requirements..."></textarea>
+                    <label for="details">Project Details *</label>
+                    <textarea id="details" placeholder="Tell me about your project goals, timeline, and any specific requirements..." rows="5" required></textarea>
                 </div>
 
-                <button type="submit">Send Message & Get Free Quote</button>
+                <button type="submit" aria-label="Send project inquiry message">Send Message & Get Free Quote</button>
             </form>
         </div>
 
-        <!-- RIGHT SIDE -->
-        <div class="contact-info">
-            <h2>Get in Touch</h2>
+        <!-- RIGHT SIDE - Contact Info -->
+        <div class="contact-info" role="region" aria-labelledby="contact-info-title">
+            <h2 id="contact-info-title">Get in Touch</h2>
 
-           <div class="info-card">
-    <div class="icon-box">
-        <i class="fas fa-location-dot"></i>
-    </div>
-    <div class="info-text">
-        <h4>Location</h4>
-        <p>Available Globally</p>
-        <small>Available for remote work worldwide</small>
-    </div>
-</div>
+            <div class="info-card" role="group" aria-label="Location information">
+                <div class="icon-box" aria-hidden="true">
+                    <i class="fas fa-location-dot"></i>
+                </div>
+                <div class="info-text">
+                    <h4>Location</h4>
+                    <p>Available Globally</p>
+                    <small>Available for remote work worldwide</small>
+                </div>
+            </div>
 
-<div class="info-card">
-    <div class="icon-box">
-        <i class="fas fa-envelope"></i>
-    </div>
-    <div class="info-text">
-        <h4>Email</h4>
-        <p class="link">masktk777@gmail.com</p>
-        <small>Response within 24 hours</small>
-    </div>
-</div>
+            <div class="info-card" role="group" aria-label="Email contact">
+                <div class="icon-box" aria-hidden="true">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info-text">
+                    <h4>Email</h4>
+                    <p class="link">masktk777@gmail.com</p>
+                    <small>Response within 24 hours</small>
+                </div>
+            </div>
 
-<div class="info-card">
-    <div class="icon-box">
-        <i class="fab fa-whatsapp"></i>
-    </div>
-    <div class="info-text">
-        <h4>WhatsApp</h4>
-        <p class="link">+92 303 932 3389</p>
-        <small>Quick messaging and calls</small>
-    </div>
-</div>
+            <div class="info-card" role="group" aria-label="WhatsApp contact">
+                <div class="icon-box" aria-hidden="true">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="info-text">
+                    <h4>WhatsApp</h4>
+                    <p class="link">+92 303 932 3389</p>
+                    <small>Quick messaging and calls</small>
+                </div>
+            </div>
 
-<div class="info-card">
-    <div class="icon-box">
-        <i class="fas fa-clock"></i>
-    </div>
-    <div class="info-text">
-        <h4>Availability</h4>
-        <p>24/7 Support Available</p>
-        <small>Flexible hours for international clients</small>
-    </div>
-</div>
+            <div class="info-card" role="group" aria-label="Availability information">
+                <div class="icon-box" aria-hidden="true">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="info-text">
+                    <h4>Availability</h4>
+                    <p>24/7 Support Available</p>
+                    <small>Flexible hours for international clients</small>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+</main>
 
-    </main>
-
-   
-    <!-- FOOTER -->
-<footer class="footer">
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo" aria-labelledby="footer-brand">
     <div class="footer-container">
         
         <div class="footer-main">
             
             <!-- Left Side -->
             <div class="footer-left">
-                <h3>Mudassir Shah</h3>
+                <h3 id="footer-brand">Mudassir Shah</h3>
                 <p>
                     Passionate MERN Stack Developer specializing in building modern, scalable, 
                     and user-friendly web applications.
@@ -370,8 +378,8 @@ Full-stack CRUD application built using Express.js and Node.js. Implements RESTf
             </div>
 
             <!-- Quick Links -->
-            <div class="footer-links">
-                <h4>Quick Links</h4>
+            <div class="footer-links" role="navigation" aria-labelledby="footer-quick-links">
+                <h4 id="footer-quick-links">Quick Links</h4>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -385,9 +393,7 @@ Full-stack CRUD application built using Express.js and Node.js. Implements RESTf
 
         <!-- Bottom Bar -->
         <div class="footer-bottom">
-            <center>
-                <p>&copy; 2026 Mudassir Shah. All Rights Reserved.</p>
-            </center>
+            <p>&copy; 2026 Mudassir Shah. All Rights Reserved.</p>
         </div>
     </div>
 </footer>

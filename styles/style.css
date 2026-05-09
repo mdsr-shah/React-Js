@@ -1,23 +1,37 @@
-
-
 body {
   font-family: 'Poppins', sans-serif;
 }
 
+
+:root {
+    /* Colors */
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --accent: #8b5cf6;
+    --black: #000000;
+    --white: #ffffff;
+
+    --text-primary: #1e2937;
+    --text-secondary: #475569;
+    --bg-white: #ffffff;
+    --bg-light: #f8fafc;
+    --border: #e2e8f0;
+}
+
 .header {
     position: fixed;
-    max-width: 100%;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 50;
+    z-index: 1000;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s ease;
 }
 
 .navbar {
-    max-width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -25,21 +39,24 @@ body {
 .nav-container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around;  
     height: 60px;
 }
 
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
     gap: 12px;
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo-icon {
-    width: 30px;
-    height: 30px;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    color: white;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: var(--white);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -51,7 +68,7 @@ body {
 .logo h1 {
     font-size: 1rem;
     font-weight: 700;
-    color: #1e2937;
+    color: var(--text-primary);
     margin: 0;
 }
 
@@ -67,20 +84,21 @@ body {
 
 .nav-links a {
     padding: 8px 20px;
-    color: #475569;
+    color: var(--text-secondary);
     font-weight: 600;
     text-decoration: none;
+    border-radius: 9999px;
     transition: all 0.25s ease;
     font-size: 0.9rem;
 }
 
 .nav-links a:hover {
-    color: #4f46e5;
-    background-color: #f8fafc;
+    color: var(--primary);
+    background-color: var(--bg-light);
 }
 
 .nav-links .active {
-    background-color: #6366f1;
+    background-color: var(--primary);
     color: white;
     border-radius: 10px;
 }
@@ -91,45 +109,46 @@ body {
     align-items: center;
 }
 
-.dark-toggle {
-    width: 42px;
-    height: 42px;
+.dark-toggle, .menu-btn {
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 50%;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+    background: #f1f5f9;
+    color:var(--black);
+    border: none;
 }
 
-.dark-toggle:hover {
-    background-color: #f1f5f9;
+.dark-toggle:hover, .menu-btn:hover {
+    background-color: var(--black);
+    color: #f1f5f9;
 }
 
 .menu-btn {
     display: none;
     font-size: 1.5rem;
+    padding: 18px;
     cursor: pointer;
-    padding: 8px;
 }
-
-/* Responsive */
+/* ====================== RESPONSIVE NAVBAR ====================== */
 @media (max-width: 1024px) {
-
     .nav-links {
         position: absolute;
-        top: 60px;
+        top: 60px;  
         left: 0;
         width: 100%;
-
+        
         flex-direction: column;
         align-items: center;
-
-        background: white;
+        background: var(--white);
         padding: 20px 0;
-
         display: none;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
@@ -138,20 +157,21 @@ body {
 
     .menu-btn {
         display: block;
+        padding: 0;
     }
 }
 
-/* HERO SECTION */
+/* ====================== HERO SECTION ====================== */
 .hero {
     padding-top: 100px;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(to bottom, #f8fafc, #ffffff);
+    background: linear-gradient(to bottom, var(--bg-light), var(--bg-white));
 }
 
 .hero-container {
-    max-width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 24px;
     display: grid;
@@ -168,18 +188,18 @@ body {
 }
 
 .highlight {
-    color: #6366f1;
+    color: var(--primary);
 }
 
 .hero-left h2 {
     font-size: 1.65rem;
-    color: #475569;
+    color: var(--text-secondary);
     margin-bottom: 24px;
 }
 
 .hero-desc {
     font-size: 1.15rem;
-    color: #64748b;
+    color: var(--text-light);
     line-height: 1.7;
     max-width: 480px;
     margin-bottom: 40px;
@@ -189,40 +209,64 @@ body {
     display: flex;
     gap: 16px;
     margin-bottom: 50px;
+    flex-wrap: wrap;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
     padding: 14px 32px;
     border-radius: 10px;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    min-width: 160px;
+    justify-content: center;
 }
 
 .btn-primary {
-    background: #6366f1;
-    color: white;
+    background: var(--primary);
+    color: var(--white);
 }
 
 .btn-primary:hover {
-    background: #4f46e5;
+    background: var(--primary-dark);
     transform: translateY(-3px);
 }
 
 .btn-secondary {
-    border: 2px solid #6366f1;
-    color: #1e2937;
+    border: 2px solid var(--primary);
+    color: var(--text-primary);
 }
 
 .btn-secondary:hover {
-    background: #6366f1;
-    color: white;
+    background: var(--primary);
+    color: var(--white);
 }
 
 /* Stats */
+.hero-stats {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.stat h3 {
+    font-size: 2.4rem;
+    color: var(--primary);
+    margin: 0;
+}
+
+.stat p {
+    color: var(--text-light);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+
+/* ====================== HERO STATS ====================== */
 .hero-stats {
     display: flex;
     gap: 50px;
@@ -240,7 +284,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* Right Side - Profile */
+/* ====================== HERO RIGHT SIDE - PROFILE ====================== */
 .hero-right {
     display: flex;
     justify-content: center;
@@ -255,7 +299,7 @@ body {
     margin: 0 auto;
 }
 
-/* Large Soft Purple Glow Circle (Main Background) */
+/* Large Soft Purple Glow Circle */
 .large-glow-circle {
     position: absolute;
     top: 50%;
@@ -288,10 +332,9 @@ body {
     object-fit: cover;
     border-radius: 50%;
     z-index: 3;
-
 }
 
-/* Floating Skills */
+/* ====================== FLOATING SKILLS ====================== */
 .floating-skills {
     position: absolute;
     top: 0;
@@ -308,21 +351,16 @@ body {
     border-radius: 12px;
     width: 80px;
     height: 80px;
-   
     display: flex;
     align-items: center;
     justify-content: center;
-   
     background: rgba(230, 231, 242, 0.1);
     color: #555;
     font: 14px 'Poppins', sans-serif;
     box-shadow: 
         6px 6px 12px rgba(0, 0, 0, 0.08),
         -6px -6px 12px rgba(255, 255, 255, 0.7);
-
     border: 1px solid rgba(0, 0, 0, 0.05);
-    
-    
 }
 
 @keyframes float {
@@ -341,12 +379,13 @@ body {
 .skill:nth-child(5) { animation-delay: 2s; }
 
 /* Skill Positions */
-.skill-1 { top: -5%; left: 10%}     /* React */
-.skill-2 { right: 0%; top: -8% }    /* JavaScript */
-.skill-3 { bottom: 45%; left: -16%; }  /* MySQL */
-.skill-4 { bottom: 10%; right: -12%; } /* Node.js */
-.skill-5 { top: 80%; left: -5%; }       /* Tailwind */
+.skill-1 { top: -5%; left: 10%; }     /* React */
+.skill-2 { right: 0%; top: -8%; }     /* JavaScript */
+.skill-3 { bottom: 45%; left: -16%; } /* MySQL */
+.skill-4 { bottom: 10%; right: -12%; }/* Node.js */
+.skill-5 { top: 80%; left: -5%; }     /* Tailwind */
 
+/* ====================== RESPONSIVE - HERO SECTION ====================== */
 
 @media (max-width: 1024px) {
     
@@ -377,7 +416,7 @@ body {
         font-size: 1rem;
     }
 
-     .hero-stats {
+    .hero-stats {
         justify-content: center;
         gap: 30px;
         flex-wrap: nowrap;
@@ -402,7 +441,6 @@ body {
         max-width: 500px;
     }
 
-
     .hero-right {
         order: 1;
         margin-bottom: 40px;
@@ -426,6 +464,8 @@ body {
     }
 }
 
+/* ====================== RESPONSIVE - HERO BUTTONS ====================== */
+
 @media (max-width: 768px) {
     .hero-buttons {
         gap: 12px;
@@ -444,6 +484,7 @@ body {
         padding: 13px 20px;
     }
 }
+
 
 /* ====================== ABOUT SECTION ====================== */
 .about-section {
@@ -493,7 +534,7 @@ body {
     margin-bottom: 0;
 }
 
-/* ====================== RESPONSIVE ====================== */
+/* ====================== RESPONSIVE - ABOUT SECTION ====================== */
 
 @media (max-width: 1024px) {
     .about-section {
@@ -621,7 +662,7 @@ body {
     border-bottom: none;
 }
 
-/* ====================== RESPONSIVE ====================== */
+/* ====================== RESPONSIVE - SKILLS SECTION ====================== */
 
 @media (max-width: 1024px) {
     .skills-section {
@@ -679,6 +720,7 @@ body {
         font-size: 1.2rem;
     }
 }
+
 
 /* ====================== PROJECTS SECTION ====================== */
 .projects-section {
@@ -765,6 +807,7 @@ body {
     line-height: 1.6;
     color: #64748b;
     margin-bottom: 16px;
+    text-align: justify;
 }
 
 .project-tech {
@@ -782,7 +825,7 @@ body {
     color: #475569;
 }
 
-/* ====================== RESPONSIVE ====================== */
+/* ====================== RESPONSIVE - PROJECTS SECTION ====================== */
 
 @media (max-width: 1024px) {
     .projects-section {
@@ -839,6 +882,7 @@ body {
         font-size: 0.9rem;
     }
 }
+
 
 /* ====================== CONTACT SECTION ====================== */
 .contact-section {
@@ -923,6 +967,9 @@ button {
     margin-top: 10px;
 }
 
+.dark-toggle{
+    margin-top: 0
+}
 /* RIGHT SIDE - Info Cards */
 .contact-info {
     flex: 1;
@@ -977,7 +1024,7 @@ button {
     font-size: 0.9rem;
 }
 
-/* ====================== RESPONSIVE ====================== */
+/* ====================== RESPONSIVE - CONTACT SECTION ====================== */
 
 @media (max-width: 1024px) {
     .container {
@@ -1025,6 +1072,7 @@ button {
         font-size: 1.2rem;
     }
 }
+
 
 /* ====================== FOOTER ====================== */
 .footer {
@@ -1103,7 +1151,7 @@ button {
     font-size: 0.95rem;
 }
 
-/* ====================== RESPONSIVE ====================== */
+/* ====================== RESPONSIVE - FOOTER ====================== */
 
 @media (max-width: 1024px) {
     .footer {
@@ -1153,7 +1201,7 @@ button {
     }
 }
 
-/* Smooth Scrolling */
+/* ====================== SMOOTH SCROLLING ====================== */
 html {
     scroll-behavior: smooth;
 }
