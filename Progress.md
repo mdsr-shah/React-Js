@@ -27,6 +27,12 @@ I learned the concepts of CSS animations and transitions and how they are used t
 Day 9: Responsive Web Design with Media Queries ---
 I learned how to make websites responsive so that they can adapt effectively to different screen sizes and devices. During this session, I explored the use of CSS media queries to apply different styles based on screen width and device characteristics. I also practiced using relative units such as percentages, `em`, `rem`, `vw`, and `vh` to create flexible layouts that scale properly across desktops, tablets, and mobile devices. As part of the implementation, I improved the responsiveness of my portfolio website by adjusting layouts, typography, spacing, and navigation for smaller screens. This session enhanced my understanding of modern responsive design techniques and the importance of creating user-friendly interfaces for all devices.
 
+Day 10: Advanced HTML & CSS Best Practices ---
+I explored advanced concepts in HTML and CSS that contribute to building optimized, accessible, and professional web applications. During this session, I learned about Open Graph (OG) tags and how they improve the appearance of webpages when shared on social media platforms. I also studied ARIA attributes and their importance in enhancing accessibility for users who rely on assistive technologies. In addition, I practiced HTML and CSS best practices, including writing clean and maintainable code, improving file structure, and following semantic standards. I learned how to add favicons to websites, implement form validation for better user input handling, and use resource preloading techniques to improve website performance and loading speed. Furthermore, I worked on code refactoring to make my project more organized, efficient, and easier to maintain.
+
+Day 11: Introduction to SCSS ---
+I learned the fundamentals of SCSS and how it improves the efficiency and organization of CSS in modern web development. During this session, I explored features such as variables, nesting, mixins, partials, and inheritance, which help reduce code repetition and make styling more maintainable. I also understood how SCSS enhances scalability by allowing developers to structure stylesheets in a cleaner and more modular way. Additionally, I practiced converting regular CSS into SCSS syntax and learned how SCSS is compiled into standard CSS for browser compatibility. This session strengthened my understanding of advanced styling workflows and modern frontend development practices.
+
 
 		
 		
