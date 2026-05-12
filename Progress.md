@@ -33,6 +33,10 @@ I explored advanced concepts in HTML and CSS that contribute to building optimiz
 Day 11: Introduction to SCSS ---
 I learned the fundamentals of SCSS and how it improves the efficiency and organization of CSS in modern web development. During this session, I explored features such as variables, nesting, mixins, partials, and inheritance, which help reduce code repetition and make styling more maintainable. I also understood how SCSS enhances scalability by allowing developers to structure stylesheets in a cleaner and more modular way. Additionally, I practiced converting regular CSS into SCSS syntax and learned how SCSS is compiled into standard CSS for browser compatibility. This session strengthened my understanding of advanced styling workflows and modern frontend development practices.
 
+Day 12: JavaScript Fundamentals ---
+I learned the fundamentals of JavaScript and its role in adding interactivity and dynamic functionality to web applications. During this session, I explored core JavaScript concepts including variables, data types, operators, conditional statements, loops, functions, arrays, and objects. I also practiced writing basic scripts to perform calculations, handle user input, and manipulate webpage behavior. In addition, I gained an understanding of how JavaScript works alongside HTML and CSS to create interactive user experiences. This session helped build a strong foundation in programming logic and frontend web development using JavaScript.
+
+
 
 		
 		
