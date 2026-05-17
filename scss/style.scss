@@ -96,8 +96,7 @@ body {
     }
 
     .nav-container {
-        display: flex;
-        align-items: center;
+        @include flex-center;
         justify-content: space-around;
 
         height: 60px;
@@ -109,8 +108,7 @@ body {
 // ======================================================
 
 .logo {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     gap: 12px;
 
     text-decoration: none;
@@ -342,7 +340,7 @@ body {
 
 .btn-secondary {
     border: 2px solid $primary;
-    color: $text-primary;
+    color: $primary;
 
     &:hover {
         background: $primary;
@@ -480,7 +478,7 @@ body {
 
     box-shadow:
         6px 6px 12px rgba(0, 0, 0, 0.08),
-        -6px -6px 12px rgba(255, 255, 255, 0.7);
+        0px 0px 10px rgba(255, 255, 255, 0.5);
 
     border: 1px solid rgba(0, 0, 0, 0.05);
 
@@ -1050,28 +1048,15 @@ body {
     }
 }
 
-.success-badge {
-    position: absolute;
-
-    top: 16px;
-    right: 16px;
-
-    background: #22c55e;
-    color: $white;
-
-    font-size: 0.85rem;
-    font-weight: 500;
-
-    padding: 4px 12px;
-
-    border-radius: 9999px;
-}
 
 // ======================================================
 // PROJECT INFO
 // ======================================================
 
 .project-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     padding: 24px;
 
     h3 {
@@ -1115,17 +1100,14 @@ body {
 // ======================================================
 
 .project-tech {
-    display: flex;
+    @include flex-center;
     gap: 8px;
-
     flex-wrap: wrap;
-
-    justify-content: center;
 
     span {
         font-size: 0.8rem;
 
-        background: #f1f5f9;
+        background: rgba(0, 0, 0, 0.08);
 
         padding: 4px 10px;
 
@@ -1238,7 +1220,7 @@ body {
     .container {
         display: flex;
         gap: 40px;
-        max-width: 1200px;
+        max-width: 100%;
         margin: 0 auto;
         padding: 0 24px;
     }
@@ -1566,4 +1548,487 @@ html {
 
 #about, #skills, #projects, #contacts {
     scroll-margin-top: 5px;
+}
+
+/* ================= MODAL ================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s ease;
+
+    z-index: 1000;
+
+    backdrop-filter: blur(8px);
+
+    padding: 20px;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* MODAL BOX */
+
+.modal-content {
+    background: #fffafa;
+
+    width: 100%;
+    max-width: 700px;
+
+    border-radius: 24px;
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    position: relative;
+
+    transform: translateY(40px);
+
+    transition: 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    .modal.active & {
+        transform: translateY(0);
+    }
+
+    img {
+        width: 100%;
+        height: 320px;
+
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    h2 {
+        font-size: 2rem;
+
+        padding: 24px 24px 12px;
+
+        color: $text-secondary;
+    }
+
+    p {
+        padding: 0 24px 30px;
+
+        color: $black;
+
+        line-height: 1.8;
+    }
+}
+
+/* CLOSE BUTTON */
+
+.close-modal {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    font-size: 2rem;
+
+    color: $white;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.3s ease;
+
+    &:hover {
+        transform: rotate(90deg);
+    }
+}
+
+.modal-body {
+    padding: 0px 24px 30px;
+    color: $white;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: $text-light;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        color: $text-secondary;
+    }
+
+    ul {
+        padding-left: 18px;
+        color: $text-light;
+        line-height: 1.8;
+    }
+}
+
+/* TECH STACK STYLE */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    span {
+        background: rgba(0, 0, 0, 0.08);
+        padding: 6px 12px;
+        border-radius: 20px;
+        border-color: #22c55e;
+        font-size: 0.85rem;
+        color: $text-primary;
+    }
+}
+
+/* LINKS */
+.modal-links {
+    margin-top: 20px;
+
+    display: flex;
+    gap: 15px;
+
+    a {
+        text-decoration: none;
+        padding: 10px 16px;
+        border-radius: 10px;
+        background: #4f46e5;
+        color: white;
+        font-weight: 500;
+        transition: 0.3s ease;
+
+        &:hover {
+            background: #3730a3;
+        }
+    }
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+}
+
+/* PROJECT BUTTON */
+
+.project-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-3px);
+    }
+}
+
+////////////////////////////////////////
+/// Responsive Modal
+/// ///////////////////////////////////
+
+@include tablet {
+    .modal-content {
+        max-width: 90%;
+    }
+
+    .modal-content img {
+        height: 260px;
+    }
+}
+
+@include mobile {
+    .modal-content {
+        max-width: 95%;
+        border-radius: 16px;
+    }
+
+    .modal-content img {
+        height: 220px;
+    }
+
+    .modal-body {
+        padding: 16px;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 0.95rem;
+        }
+    }
+
+    .modal-links {
+        flex-direction: column;
+
+        a {
+            text-align: center;
+        }
+    }
+}
+
+@include small-mobile {
+    .modal-content img {
+        height: 180px;
+    }
+
+    .modal-body {
+        padding: 14px;
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    .tech-stack span {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+
+    .modal-links a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ====================== DARK MODE ====================== */
+.dark {
+    // Re-assign variables for dark mode
+    $text-primary: #f1f5f9;
+    $text-secondary: #cbd5e1;
+    $text-light: #94a3b8;
+
+    $bg-light: #1e2937;
+    $bg-white: #0f172a;
+    $border: #334155;
+
+    // background: #0f172a; bg-white
+    // border-color: #334155; border
+    // border-radius: 16px;
+    // color: #cbd5e1;
+
+    background-color: #0f172a;
+    color: $text-secondary;
+
+    /* Header */
+    .header {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom-color: $border;
+    }
+
+    /* Hero */
+    .hero {
+        background: linear-gradient(to bottom, #1e2937, #0f172a);
+    }
+
+    /* Sections */
+    .about-section,
+    .projects-section,
+    .contact-section, .skills-section {
+        background: $bg-white;
+    }
+
+
+    /* Cards */
+    .skill-card,
+    .project-card,
+    .form-box,
+    .info-card {
+        background: $bg-white;
+        border-color: $border;
+        border-radius: 16px;
+        color: $text-secondary;
+    }
+
+    .project-card {
+        border: 1px solid $border;
+    }
+
+    .project-info 
+    {
+
+        button {
+        background: #4f46e5;
+        color: $white;
+
+        &:hover {
+            background: #3730a3;
+        }
+
+    }
+}
+
+    /* Text */
+    h1, h2, h3, h4, .section-title {
+        color: $text-primary;
+    }
+
+    p, .hero-desc, .section-subtitle, .project-info p, .about-content p, .skill {
+        color: $text-secondary;
+    }
+
+    .form-box h2{
+        color: $text-primary;
+    }
+    /* Form Inputs */
+    input, select, textarea {
+        background: $bg-white;
+        border-color: $border;
+        color: $text-secondary;
+    }
+
+    .contact-section{
+        .contact-info{
+            .info-card 
+             {
+                 .icon-box{
+                     background: rgb(230 231 242 / 10%);
+                 }
+                }
+            }
+        }
+
+    /* Footer */
+    .footer {
+        background: #0f172a;
+        border-top-color: $border;
+        color: $text-secondary;
+    }
+
+    #footer-brand {
+        color: #6366f1;
+    }
+
+    .footer-links h4 {
+        color: $text-primary;
+    }
+
+    .footer-left p,
+    .footer-contact p,
+    .footer-links a {
+        color: $text-secondary;
+    }
+
+    /* Nav Links */
+    .nav-links a {
+        color: $text-secondary;
+    }
+
+    .nav-links a:hover {
+        background-color: #1e2937;
+    }
+
+    /* Dark Toggle Button */
+    .dark-toggle {
+        background: #1e2937;
+        color: $text-secondary;
+        
+        &:hover {
+            background: $text-secondary;
+            color: #1e2937;
+        }
+    }
+
+    /* Contact Info Cards */
+    .contact-info{
+        .info-card{
+            background: $bg-white;
+            color: $text-secondary;
+            border-color: $border;
+
+            .info-text {
+                h4, p {
+                    color: $text-primary;
+                }
+                small {
+                    color: $text-light;
+                }
+            }
+    }
+}
+
+    /* Skills Card */
+    .skill-card {
+        h3 {
+            color: $text-primary;
+        }
+        li {
+            color: $text-secondary;
+            border-bottom-color: $border;
+        }
+    }
+    .modal-content {
+    background: #1e2937;
+    border-color: #475569;
+    color: #e2e8f0;
+
+    h2 {
+        color: #f1f5f9;
+    }
+
+    p {
+        color: #cbd5e1;
+    }
+}
+
+.modal-body {
+    color: #e2e8f0;
+
+    h2, h3 {
+        color: #f1f5f9;
+    }
+
+    p, ul {
+        color: #cbd5e1;
+    }
+}
+
+.tech-stack span {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+}
+
+.close-modal {
+    color: #e2e8f0;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.3);
+}
 }

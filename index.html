@@ -51,9 +51,7 @@
 
             <!-- Right Side -->
             <div class="nav-right">
-                <button class="dark-toggle" id="darkToggle" aria-label="Toggle Dark Mode">
-                    ☾
-                </button>
+                <button class="dark-toggle" id="darkToggle" aria-label="Toggle Dark Mode">☾</button>
                 <button class="menu-btn" id="menuBtn" 
                         aria-label="Open navigation menu" 
                         aria-expanded="false">
@@ -202,66 +200,285 @@
         </div>
     </div>
 </section>
-
-
 <!-- PROJECTS SECTION -->
 <section id="projects" class="projects-section" aria-labelledby="projects-title">
+
     <div class="section-container">
-        <h2 id="projects-title" class="section-title">Featured Projects</h2>
+
+        <h2 id="projects-title" class="section-title">
+            Featured Projects
+        </h2>
+
         <p class="section-subtitle" id="projects-desc">
             Showcasing some of my recent work in web development and full-stack applications.
         </p>
 
-        <div class="projects-grid" role="list" aria-label="Featured Projects">
-            
-            <!-- Project 1 -->
+        <div class="projects-grid" role="list">
+
+            <!-- PROJECT 1 -->
             <div class="project-card" role="listitem">
+
                 <div class="project-image">
                     <img src="/img/project-1.jpg" alt="Smart Hotel Management System">
                 </div>
+
                 <div class="project-info">
-                    <h3 id="project-1">The Smart Hotel</h3>
+
+                    <h3>The Smart Hotel</h3>
+
                     <p>Complete hotel booking system featuring an intuitive user interface for room reservations and a powerful admin dashboard. The system includes customer management, room availability tracking, booking history, and real-time status updates.</p>
-                    <div class="project-tech" aria-labelledby="project-1">
+
+                    <div class="project-tech">
                         <span>PHP</span>
                         <span>MySQL</span>
                     </div>
+
+                    <button class="project-btn" data-modal="modal-1">
+                        View Details
+                    </button>
+
                 </div>
+
             </div>
 
-            <!-- Project 2 -->
+            <!-- PROJECT 2 -->
             <div class="project-card" role="listitem">
+
                 <div class="project-image">
                     <img src="/img/project-2.jpg" alt="Modern Portfolio Website">
                 </div>
+
                 <div class="project-info">
-                    <h3 id="project-2">Modern Portfolio Website</h3>
-                    <p>Responsive personal portfolio built using React with a clean, modern UI. Showcases projects, skills, and contact features with optimized performance along with a variety of colors and skills and technical skills.</p>
-                    <div class="project-tech" aria-labelledby="project-2">
+
+                    <h3>Modern Portfolio Website</h3>
+
+                    <p>Responsive personal portfolio built using React with a clean, modern UI. Showcases projects, skills, and contact features with optimized performance along with a variety of colors and skills and technical skills, showcasing my work and expertise. </p>
+
+                    <div class="project-tech">
                         <span>React</span>
                         <span>Tailwind</span>
                     </div>
+
+                    <button class="project-btn" data-modal="modal-2">
+                        View Details
+                    </button>
+
                 </div>
+
             </div>
 
-            <!-- Project 3 -->
+            <!-- PROJECT 3 -->
             <div class="project-card" role="listitem">
+
                 <div class="project-image">
                     <img src="/img/project-3.jpg" alt="CRUD Application">
                 </div>
+
                 <div class="project-info">
-                    <h3 id="project-3">CRUD Application</h3>
-                    <p>Full-stack CRUD application built using Express.js and Node.js. Implements RESTful APIs for creating, reading, updating, and deleting data. Includes efficient database integration and structured backend architecture.</p>
-                    <div class="project-tech" aria-labelledby="project-3">
+
+                    <h3>CRUD Application</h3>
+
+                   <p>Full-stack CRUD application built using Express.js and Node.js. Implements RESTful APIs for creating, reading, updating, and deleting data. Includes efficient database integration and structured backend architecture.</p>
+
+                    <div class="project-tech">
                         <span>MongoDB</span>
                         <span>React</span>
                     </div>
+
+                    <button class="project-btn" data-modal="modal-3">
+                        View Details
+                    </button>
+
                 </div>
+
             </div>
 
         </div>
+
     </div>
+
 </section>
+
+<!-- ================= MODALS ================= -->
+
+<!-- MODAL 1 -->
+<div class="modal" id="modal-1">
+
+    <div class="modal-content">
+
+        <span class="close-modal">&times;</span>
+
+        <img src="/img/project-1.jpg" alt="Smart Hotel Management System">
+
+        <div class="modal-body">
+
+            <h2>The Smart Hotel</h2>
+
+            <p>
+                A complete hotel management and booking system designed to automate room reservations,
+                customer handling, and administrative operations. The system provides real-time room
+                availability, booking history tracking, and a structured admin dashboard for managing
+                hotel operations efficiently.
+            </p>
+
+            <!-- FEATURES -->
+            <h3>Key Features</h3>
+            <ul>
+                <li>Room booking and reservation system</li>
+                <li>Customer management module</li>
+                <li>Admin dashboard for full control</li>
+                <li>Real-time room availability tracking</li>
+                <li>Booking history and reporting system</li>
+            </ul>
+
+            <!-- TECH STACK -->
+            <h3>Tech Stack</h3>
+            <div class="tech-stack">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+
+            <!-- TOOLS -->
+            <h3>Tools Used</h3>
+            <div class="tech-stack">
+                <span>VS Code</span>
+                <span>XAMPP</span>
+                <span>phpMyAdmin</span>
+            </div>
+
+            <!-- LINKS -->
+            <!-- <div class="modal-links">
+                <a href="#" target="_blank">Live Demo</a>
+                <a href="#" target="_blank">GitHub Repo</a>
+            </div> -->
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MODAL 2 -->
+<div class="modal" id="modal-2">
+
+    <div class="modal-content">
+
+        <span class="close-modal">&times;</span>
+
+        <img src="/img/project-2.jpg" alt="Modern Portfolio Website">
+
+        <div class="modal-body">
+
+            <h2>Modern Portfolio Website</h2>
+
+            <p>
+                A fully responsive personal portfolio website designed to showcase projects,
+                skills, and professional experience. Built with a modern UI approach, smooth animations,
+                and performance optimization.
+            </p>
+
+            <!-- FEATURES -->
+            <h3>Key Features</h3>
+            <ul>
+                <li>Responsive design for all devices</li>
+                <li>Smooth animations and transitions</li>
+                <li>Projects showcase section</li>
+                <li>Contact form integration</li>
+                <li>Optimized performance and SEO friendly structure</li>
+            </ul>
+
+            <!-- TECH STACK -->
+            <h3>Tech Stack</h3>
+            <div class="tech-stack">
+                <span>HTML5</span>
+                <span>CSS3 / SCSS</span>
+                <span>JavaScript</span>
+                <span>React.js</span>
+                <span>Tailwind CSS</span>
+            </div>
+
+            <!-- TOOLS -->
+            <h3>Tools & Libraries</h3>
+            <div class="tech-stack">
+                <span>Git & GitHub</span>
+                <span>VS Code</span>
+                <span>Figma (UI Design)</span>
+            </div>
+
+            <!-- LINKS -->
+            <!-- <div class="modal-links">
+                <a href="#" target="_blank">Live Demo</a>
+                <a href="#" target="_blank">GitHub Repo</a>
+            </div> -->
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MODAL 3 -->
+<div class="modal" id="modal-3">
+
+    <div class="modal-content">
+
+        <span class="close-modal">&times;</span>
+
+        <img src="/img/project-3.jpg" alt="CRUD Application">
+
+        <div class="modal-body">
+
+            <h2>CRUD Application</h2>
+
+            <p>
+                A full-stack CRUD (Create, Read, Update, Delete) application built using the MERN stack.
+                It demonstrates efficient RESTful API integration, database operations, and structured backend
+                architecture for managing data in real time.
+            </p>
+
+            <!-- FEATURES -->
+            <h3>Key Features</h3>
+            <ul>
+                <li>Create, read, update, and delete records</li>
+                <li>RESTful API architecture</li>
+                <li>MongoDB database integration</li>
+                <li>Responsive frontend interface</li>
+                <li>Efficient state management with React</li>
+            </ul>
+
+            <!-- TECH STACK -->
+            <h3>Tech Stack</h3>
+            <div class="tech-stack">
+                <span>MongoDB</span>
+                <span>Express.js</span>
+                <span>React.js</span>
+                <span>Node.js</span>
+                <span>JavaScript</span>
+            </div>
+
+            <!-- TOOLS -->
+            <h3>Tools Used</h3>
+            <div class="tech-stack">
+                <span>VS Code</span>
+                <span>Postman</span>
+                <span>Git & GitHub</span>
+            </div>
+
+            <!-- LINKS -->
+            <!-- <div class="modal-links">
+                <a href="#" target="_blank">Live Demo</a>
+                <a href="#" target="_blank">GitHub Repo</a>
+            </div> -->
+
+        </div>
+
+    </div>
+
+</div>
+
 <!-- Contact Section -->
 <section id="contacts" class="contact-section" aria-labelledby="contact-title">
     <div class="container">
@@ -395,6 +612,97 @@
         </div>
     </div>
 </footer>
+
+<script>
+    const projectButtons = document.querySelectorAll(".project-btn");
+
+const modals = document.querySelectorAll(".modal");
+
+const closeButtons = document.querySelectorAll(".close-modal");
+
+
+// OPEN MODAL
+
+projectButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const modalId = button.getAttribute("data-modal");
+
+        document.getElementById(modalId)
+            .classList.add("active");
+
+    });
+
+});
+
+
+// CLOSE MODAL BUTTON
+
+closeButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        button.closest(".modal")
+            .classList.remove("active");
+
+    });
+
+});
+
+
+// CLOSE WHEN CLICKING OUTSIDE
+
+modals.forEach(modal => {
+
+    modal.addEventListener("click", (e) => {
+
+        if (e.target === modal) {
+
+            modal.classList.remove("active");
+
+        }
+
+    });
+
+});
+
+document.querySelectorAll(".project-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.body.style.overflow = "hidden";
+    });
+});
+
+document.querySelectorAll(".close-modal").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.body.style.overflow = "auto";
+    });
+});
+
+// Dark Mode Toggle
+const darkToggle = document.getElementById('darkToggle');
+const body = document.body;
+
+// Load saved preference
+if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark');
+    darkToggle.textContent = '☀️';
+}
+
+// Toggle Function
+darkToggle.addEventListener('click', () => {
+    body.classList.toggle('dark');
+    
+    if (body.classList.contains('dark')) {
+        localStorage.setItem('darkMode', 'enabled');
+        darkToggle.textContent = '☀️';   // Sun icon
+    } else {
+        localStorage.setItem('darkMode', 'disabled');
+        darkToggle.textContent = '☾';   // Moon icon
+    }
+});
+
+</script>
 
 </body>
 </html>
